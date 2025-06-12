@@ -1,6 +1,7 @@
 import matplotlib.pyplot as plt
 import torch
 from torch import float32, nn
+from pathlib import Path
 
 weight = 0.7
 bias = 0.3
@@ -79,3 +80,11 @@ plt.show()
 
 print(f"The model learned the following parameters: {model.state_dict()}")
 print(f"The weight: {weight}, bias: {bias}")
+
+
+MODEL_PATH = Path("models")
+MODEL_PATH.mkdir(parents=True, exist_ok=True)
+MODEL_NAME = "someShitModel.pth"
+MODEL_SAVE_PATH = MODEL_PATH / MODEL_NAME
+torch.save(obj=model.state_dict(), f=MODEL_SAVE_PATH)
+print("MODEL PARAMETERS SAVED")
