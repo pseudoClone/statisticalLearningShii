@@ -1,3 +1,10 @@
 .ipynb_checkpoints/
 envAI/
 MNIST/
+env/
+.ipynb_checkpoints/
+shitCode/torch/data/
+data
+foodData/
+shitCode/pyspark/notebooks/survey_results_public.csv
+shitCode/pyspark/notebooks/survey_results_schema.csv
